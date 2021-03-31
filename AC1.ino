@@ -15,7 +15,7 @@ void setup()
   
   pinMode(vermelho, OUTPUT);
   pinMode(verde, OUTPUT);
-  pinMode(azul, saida);
+  pinMode(azul, OUTPUT);
   
   Serial.begin(9600);
 	
@@ -32,10 +32,10 @@ void loop()
   	lastDebounceTime1 = millis();
   }
   
-  if(getTemperatura() > 30){
+  if(getTemperatura() > 15){
     ledAzul(true);
   }else{
-  	ledAzul(falso); 
+  	ledAzul(false); 
   }
   	
   delay(10);
